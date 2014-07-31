@@ -1,4 +1,4 @@
-﻿namespace Maze
+﻿namespace Jthomson.Maze
 {
     partial class Form1
     {

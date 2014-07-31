@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Maze
+namespace Jthomson.Maze
 {
     class Maze
     {

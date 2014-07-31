@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Maze
+namespace Jthomson.Maze
 {
     public enum Direction
     {
