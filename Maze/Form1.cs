@@ -12,20 +12,49 @@ namespace Jthomson.Maze
 {
     public partial class Form1 : Form
     {
+        BufferedPanel displayPanel;
+        Maze m;
+
         public Form1()
         {
             InitializeComponent();
+            displayPanel = new BufferedPanel();
+            displayPanel.Anchor = (
+                    AnchorStyles.Top |
+                    AnchorStyles.Bottom |
+                    AnchorStyles.Left | 
+                    AnchorStyles.Right
+                );
+            displayPanel.Location = new System.Drawing.Point(12, 84);
+            displayPanel.Size = new System.Drawing.Size(504, 507);
+            displayPanel.Paint += (sender, e) =>
+                {
+                    if (m != null)
+                    {
+                        m.Draw(e.Graphics, new Pen(Color.Black));
+                    }
+                };
+            this.Controls.Add(displayPanel);
         }
 
-        private void btnDraw_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             int rows = trkRows.Value;
             int cols = trkCols.Value;
-            Maze m = new Maze(cols, rows);
+            m = new Maze(cols, rows);
             m.Generate();
             m.CellSize = 10;
-            pctDisplay.CreateGraphics().Clear(pctDisplay.BackColor);
-            m.Draw(pctDisplay.CreateGraphics(), new Pen(Color.Black));
+            displayPanel.Invalidate();
+
+        }
+        
+        private class BufferedPanel : Panel
+        {
+            public BufferedPanel(): base()
+            {
+                this.DoubleBuffered = true;
+                this.ResizeRedraw = true;
+            }
         }
     }
 }

@@ -28,37 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDraw = new System.Windows.Forms.Button();
-            this.pctDisplay = new System.Windows.Forms.PictureBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.trkRows = new System.Windows.Forms.TrackBar();
             this.trkCols = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pctDisplay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trkRows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trkCols)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnDraw
+            // btnUpdate
             // 
-            this.btnDraw.Location = new System.Drawing.Point(354, 33);
-            this.btnDraw.Name = "btnDraw";
-            this.btnDraw.Size = new System.Drawing.Size(162, 45);
-            this.btnDraw.TabIndex = 0;
-            this.btnDraw.Text = "Update";
-            this.btnDraw.UseVisualStyleBackColor = true;
-            this.btnDraw.Click += new System.EventHandler(this.btnDraw_Click);
-            // 
-            // pctDisplay
-            // 
-            this.pctDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctDisplay.Location = new System.Drawing.Point(12, 84);
-            this.pctDisplay.Name = "pctDisplay";
-            this.pctDisplay.Size = new System.Drawing.Size(504, 507);
-            this.pctDisplay.TabIndex = 1;
-            this.pctDisplay.TabStop = false;
+            this.btnUpdate.Location = new System.Drawing.Point(354, 33);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(162, 45);
+            this.btnUpdate.TabIndex = 0;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // trkRows
             // 
@@ -66,7 +53,7 @@
             this.trkRows.Maximum = 100;
             this.trkRows.Minimum = 1;
             this.trkRows.Name = "trkRows";
-            this.trkRows.Size = new System.Drawing.Size(165, 45);
+            this.trkRows.Size = new System.Drawing.Size(165, 29);
             this.trkRows.TabIndex = 2;
             this.trkRows.TickFrequency = 5;
             this.trkRows.Value = 30;
@@ -77,7 +64,7 @@
             this.trkCols.Maximum = 100;
             this.trkCols.Minimum = 1;
             this.trkCols.Name = "trkCols";
-            this.trkCols.Size = new System.Drawing.Size(165, 45);
+            this.trkCols.Size = new System.Drawing.Size(165, 29);
             this.trkCols.TabIndex = 3;
             this.trkCols.TickFrequency = 5;
             this.trkCols.Value = 30;
@@ -109,11 +96,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.trkCols);
             this.Controls.Add(this.trkRows);
-            this.Controls.Add(this.pctDisplay);
-            this.Controls.Add(this.btnDraw);
+            this.Controls.Add(this.btnUpdate);
             this.Name = "Form1";
             this.Text = "A maze ing";
-            ((System.ComponentModel.ISupportInitialize)(this.pctDisplay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trkRows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trkCols)).EndInit();
             this.ResumeLayout(false);
@@ -123,8 +108,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDraw;
-        private System.Windows.Forms.PictureBox pctDisplay;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TrackBar trkRows;
         private System.Windows.Forms.TrackBar trkCols;
         private System.Windows.Forms.Label label1;
